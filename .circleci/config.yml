@@ -1,13 +1,13 @@
+version: 1
 jobs:
   build:
     docker:
       - image: circleci/openjdk:8u232-jdk
     steps:
-      - run:
-        name: echo test
-        command: |
-            echo date
-      - run:
-        name: Test build
-        command: |
-            date
+      - checkout
+      - run : echo date
+workflows:
+  version: 1
+  build_and_test:
+    jobs:
+      - build

@@ -3,6 +3,10 @@ jobs:
     docker:
       - image: circleci/openjdk:8u232-jdk
     steps:
+      - run:
+        name: echo test
+        command: |
+            echo date
       -run:
         name: Test build
         command: |

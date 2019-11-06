@@ -7,7 +7,7 @@ jobs:
         name: echo test
         command: |
             echo date
-      -run:
+      - run:
         name: Test build
         command: |
             date
